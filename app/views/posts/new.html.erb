@@ -1,0 +1,7 @@
+<%= form_with mode: @post do |form| %>
+  <%= form.label :title, "Title" %>
+  <%= form.text_field :title %><br><br>
+  <%= form.label :content %> <!-- how do I make "content" not appear? when viewing -->
+  <%= form.text_area :content, size: "70x5" %><br><br>
+  <%= form.submit "Submit" %>
+<% end %>
