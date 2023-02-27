@@ -1,7 +1,10 @@
-<%= form_with mode: @post do |form| %>
-  <%= form.label :title, "Title" %>
+<%= form_with model: @post do |form| %>
+  <%= form.label :title, "Title" %><br>
   <%= form.text_field :title %><br><br>
-  <%= form.label :content %> <!-- how do I make "content" not appear? when viewing -->
-  <%= form.text_area :content, size: "70x5" %><br><br>
+  <%= form.label :content, "Body" %> <br>
+  <%= form.text_area :content, size: "50x5" %><br><br>
   <%= form.submit "Submit" %>
 <% end %>
+
+<br>
+<%= link_to "Home", root_path %>
