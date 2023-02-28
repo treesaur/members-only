@@ -3,7 +3,10 @@
 
 <% @posts.each do |post| %>
   <ul>
-    <li><%= post.title %></li>
+    <li><%= link_to post.title, post_path(post) %></li>
+    <% if user_signed_in? %>
+      <li>by: <%= post.user.email %></li>
+    <% end %>
   </ul>
 <% end %>
 
